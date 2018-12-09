@@ -4,3 +4,4 @@ obj
 Logs
 *.csproj
 *.sln
+iOSBuild

@@ -1,0 +1,576 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f68cea8f6e1704310b845c4720029f3d, type: 3}
+  m_Name: KKKK
+  m_EditorClassIdentifier: 
+  bpm: 120
+  measures:
+  - noteEvent1:
+      noteL:
+        noteKind: 19
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent5:
+      noteL:
+        noteKind: 18
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent6:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent7:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent8:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+  - noteEvent1:
+      noteL:
+        noteKind: 17
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent5:
+      noteL:
+        noteKind: 12
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent6:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent7:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent8:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+  - noteEvent1:
+      noteL:
+        noteKind: 5
+        trill: 1
+      noteR:
+        noteKind: 18
+        trill: 1
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent5:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent6:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent7:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent8:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+  - noteEvent1:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent5:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent6:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent7:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent8:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+  - noteEvent1:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent5:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent6:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent7:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent8:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+  - noteEvent1:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent5:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent6:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent7:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent8:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+  - noteEvent1:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent5:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent6:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent7:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent8:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+  - noteEvent1:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent5:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent6:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent7:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent8:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+  - noteEvent1:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent5:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent6:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent7:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent8:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+  - noteEvent1:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent5:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent6:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent7:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent8:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
