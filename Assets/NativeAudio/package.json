@@ -1,0 +1,8 @@
+{
+    "name": "com.e7.native-audio",
+    "author": "Sirawat Pitaksarit / 5argon - Exceed7 Experiments",
+    "displayName": "Native Audio",
+    "version": "4.0.0",
+    "unity": "2018.1",
+    "description": "Lower audio latency via OS's native audio library."
+}

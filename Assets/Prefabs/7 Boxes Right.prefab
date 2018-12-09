@@ -122,5 +122,40 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -139.3
       objectReference: {fileID: 0}
+    - target: {fileID: 3251942948188811975, guid: 0f04975296e8249198fcbfa14cfdb484,
+        type: 3}
+      propertyPath: noteToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 7aab02c19990349b0a7795b7ad528b39, type: 3}
+    - target: {fileID: 3251942948249542007, guid: 0f04975296e8249198fcbfa14cfdb484,
+        type: 3}
+      propertyPath: noteToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 23dbab1dd59eb4b80a02c09fa47f8179, type: 3}
+    - target: {fileID: 3251942948707529326, guid: 0f04975296e8249198fcbfa14cfdb484,
+        type: 3}
+      propertyPath: noteToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 15fd40a4be7a54e92b20abf62cf92859, type: 3}
+    - target: {fileID: 3251942948459745734, guid: 0f04975296e8249198fcbfa14cfdb484,
+        type: 3}
+      propertyPath: noteToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 2d0bf5831819e49ff8d7ff5cb4278ff6, type: 3}
+    - target: {fileID: 3251942948561688351, guid: 0f04975296e8249198fcbfa14cfdb484,
+        type: 3}
+      propertyPath: noteToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 02208b2a139da498a914a837f40b5ba4, type: 3}
+    - target: {fileID: 3251942947642050690, guid: 0f04975296e8249198fcbfa14cfdb484,
+        type: 3}
+      propertyPath: noteToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f3cbebbc158e4652af05589fad35018, type: 3}
+    - target: {fileID: 95937848796679114, guid: 0f04975296e8249198fcbfa14cfdb484,
+        type: 3}
+      propertyPath: noteToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 072c24809cc604b6ea1e71a6362b563d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f04975296e8249198fcbfa14cfdb484, type: 3}

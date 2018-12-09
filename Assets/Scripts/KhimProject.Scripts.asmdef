@@ -1,0 +1,14 @@
+{
+    "name": "KhimProject.Scripts",
+    "references": [
+        "E7.NativeAudio"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
