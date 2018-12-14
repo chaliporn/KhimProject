@@ -38,6 +38,33 @@ public class InstrumentString : MonoBehaviour
 
     public float WhereAmI(NoteChart currentSong, float currentTime)
     {
-        return 0;
+        float noteTime =  NextNoteTimeOfThisString(currentSong, currentTime); // 1
+        float distanceSeconds = noteTime - currentTime; //0.5
+        return distanceSeconds * globalSettings.noteSpeed;
+    }
+
+    private float NextNoteTimeOfThisString(NoteChart currentSong, float currentTime) //LJ, 0.5
+    {
+        return 0; //TODO 
+
+        float whatBeat = (currentSong.bpm / 60f) * currentTime; 
+        int whatBeatInteger = Mathf.FloorToInt(whatBeat);
+
+        float foundAt = -1;
+
+        for(int i = whatBeatInteger; i < currentSong.beats.Length; i++)
+        {
+            Beat checkingBeat = currentSong.beats[i];
+            if(checkingBeat.noteEvent1.noteL.noteKind == noteOfString) foundAt = i + 0;
+            if(checkingBeat.noteEvent1.noteR.noteKind == noteOfString) foundAt = i + 0;
+            if(checkingBeat.noteEvent2.noteL.noteKind == noteOfString) foundAt = i + 0.25f;
+            if(checkingBeat.noteEvent2.noteR.noteKind == noteOfString) foundAt = i + 0.25f;
+            if(checkingBeat.noteEvent1.noteL.noteKind == noteOfString) foundAt = i + 0;
+            if(checkingBeat.noteEvent1.noteL.noteKind == noteOfString) foundAt = i + 0;
+            if(checkingBeat.noteEvent1.noteL.noteKind == noteOfString) foundAt = i + 0;
+            if(checkingBeat.noteEvent1.noteL.noteKind == noteOfString) foundAt = i + 0;
+            if(checkingBeat.noteEvent1.noteL.noteKind == noteOfString) foundAt = i + 0;
+            if(checkingBeat.noteEvent1.noteL.noteKind == noteOfString) foundAt = i + 0;
+        }
     }
 }
