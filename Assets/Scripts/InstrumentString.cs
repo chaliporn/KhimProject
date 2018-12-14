@@ -8,6 +8,7 @@ public class InstrumentString : MonoBehaviour
 {
     public AudioClip noteToPlay;
     public Slider volumeSlider;
+    public Image activeMarker;
 
     NativeAudioPointer loadedAudio;
 
@@ -30,4 +31,7 @@ public class InstrumentString : MonoBehaviour
         loadedAudio.Play(option);
 #endif
     }
+
+    public void ShowActiveMarker() => activeMarker.enabled = true;
+    public void HideActiveMarker() => activeMarker.enabled = false;
 }
