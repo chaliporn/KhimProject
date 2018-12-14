@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using E7.Native;
+using UnityEngine.UI;
 
 public class InstrumentString : MonoBehaviour
 {
     public AudioClip noteToPlay;
+    public Slider volumeSlider;
+
     NativeAudioPointer loadedAudio;
 
     public void Awake()
@@ -19,9 +22,12 @@ public class InstrumentString : MonoBehaviour
     {
 #if UNITY_EDITOR
         AudioSource asource = gameObject.GetComponent<AudioSource>();
+        asource.volume = volumeSlider.value;
         asource.PlayOneShot(noteToPlay);
 #else
-        loadedAudio.Play();
+        var option = NativeAudio.PlayOptions.defaultOptions;
+        option.volume = volumeSlider.value;
+        loadedAudio.Play(option);
 #endif
     }
 }
