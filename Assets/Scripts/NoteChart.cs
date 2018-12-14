@@ -5,21 +5,18 @@ using UnityEngine;
 [CreateAssetMenu]
 public class NoteChart : ScriptableObject 
 {
+    public string songName;
     public int bpm = 120;
-    public Measure[] measures;
+    public Beat[] beats;
 }
 
 [System.Serializable]
-public struct Measure
+public struct Beat
 {
     public NoteEvent noteEvent1;
     public NoteEvent noteEvent2;
     public NoteEvent noteEvent3;
     public NoteEvent noteEvent4;
-    public NoteEvent noteEvent5;
-    public NoteEvent noteEvent6;
-    public NoteEvent noteEvent7;
-    public NoteEvent noteEvent8;
 }
 
 [System.Serializable]

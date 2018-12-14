@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class InstrumentString : MonoBehaviour
 {
     public AudioClip noteToPlay;
-    public Slider volumeSlider;
+    public NoteKind noteOfString;
+    public GlobalSettings globalSettings;
     public Image activeMarker;
 
     NativeAudioPointer loadedAudio;
@@ -23,15 +24,20 @@ public class InstrumentString : MonoBehaviour
     {
 #if UNITY_EDITOR
         AudioSource asource = gameObject.GetComponent<AudioSource>();
-        asource.volume = volumeSlider.value;
+        asource.volume = globalSettings.volumeSlider.value;
         asource.PlayOneShot(noteToPlay);
 #else
         var option = NativeAudio.PlayOptions.defaultOptions;
-        option.volume = volumeSlider.value;
+        option.volume = globalSettings.volumeSlider.value;
         loadedAudio.Play(option);
 #endif
     }
 
     public void ShowActiveMarker() => activeMarker.enabled = true;
     public void HideActiveMarker() => activeMarker.enabled = false;
+
+    public float WhereAmI(NoteChart currentSong, float currentTime)
+    {
+        return 0;
+    }
 }

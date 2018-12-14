@@ -5,5 +5,8 @@ using UnityEngine.UI;
 
 public class GlobalSettings : MonoBehaviour
 {
-    [SerializeField] Slider volumeSlider;
+    public Slider volumeSlider;
+    public float songTime;
+    public NoteChart selectedMusic;
+
 }
