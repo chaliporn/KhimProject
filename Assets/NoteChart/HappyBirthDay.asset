@@ -12,4 +12,118 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f68cea8f6e1704310b845c4720029f3d, type: 3}
   m_Name: HappyBirthDay
   m_EditorClassIdentifier: 
+  songName: 
   bpm: 170
+  beats:
+  - noteEvent1:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+  - noteEvent1:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+  - noteEvent1:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+  - noteEvent1:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        trill: 0
+      noteR:
+        noteKind: 0
+        trill: 0
