@@ -13,10 +13,10 @@ public class NoteChart : ScriptableObject
 [System.Serializable]
 public struct Beat
 {
-    public NoteEvent noteEvent1;
-    public NoteEvent noteEvent2;
-    public NoteEvent noteEvent3;
-    public NoteEvent noteEvent4;
+    public NoteEvent noteEvent1; //0%
+    public NoteEvent noteEvent2; //25%
+    public NoteEvent noteEvent3; //50%
+    public NoteEvent noteEvent4; //75%
 }
 
 [System.Serializable]

@@ -61,8 +61,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteToPlay: {fileID: 0}
+  noteOfString: 0
   globalSettings: {fileID: 0}
   activeMarker: {fileID: 4077783986875530371}
+  horizontalLayoutGroup: {fileID: 1585907460400547487}
 --- !u!82 &7903804482097515825
 AudioSource:
   m_ObjectHideFlags: 0
@@ -388,7 +390,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 157.6
+  m_Spacing: 156
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
