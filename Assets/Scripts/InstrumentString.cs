@@ -51,7 +51,16 @@ public class InstrumentString : MonoBehaviour
         {
             var a = Mathf.InverseLerp(nextNoteTime - visibleThreshold, nextNoteTime,  currentSongTime);
             var b = Mathf.Lerp(maxSpacing, 0, a);
-            horizontalLayoutGroup.spacing = b;
+
+            //var previousSpacing = horizontalLayoutGroup.spacing; //156
+            horizontalLayoutGroup.spacing = b; //0
+            // Debug.Log($"{b} {previousSpacing}");
+
+            // if(b == maxSpacing && previousSpacing < b)
+            // {
+            //     Debug.Log("HIT");
+            //     HitString();
+            // }
         }
     }
 
@@ -66,7 +75,7 @@ public class InstrumentString : MonoBehaviour
     {
         float currentBeat = currentSong.bpm * (currentSongTime / 60.0f);
         int currentBeatInteger = Mathf.FloorToInt(currentBeat);
-            Debug.Log($"Current beat is {currentBeat}");
+            //Debug.Log($"Current beat is {currentBeat}");
         for (int i = currentBeatInteger; i < currentSong.beats.Length; i++)
         {
             Beat inspectingThisBeat = currentSong.beats[i];
