@@ -38,6 +38,11 @@ public class InstrumentString : MonoBehaviour
 
     public void Update()
     {
+        if(globalSettings.selectedMusic == null)
+        {
+            return;
+        }
+
         float timeUntil = TimeUntilNextNote(globalSettings.selectedMusic, globalSettings.currentSongTime);
         float nextNoteTime = NextNoteTimeOfThisString(globalSettings.selectedMusic, globalSettings.currentSongTime);
         float currentSongTime = globalSettings.currentSongTime;

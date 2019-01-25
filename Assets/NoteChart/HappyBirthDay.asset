@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f68cea8f6e1704310b845c4720029f3d, type: 3}
   m_Name: HappyBirthDay
   m_EditorClassIdentifier: 
-  songName: 
+  songName: Happy Birth Day
+  rhythm: 2
   bpm: 170
   beats:
   - noteEvent1:

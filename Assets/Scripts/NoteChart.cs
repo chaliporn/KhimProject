@@ -6,6 +6,7 @@ using UnityEngine;
 public class NoteChart : ScriptableObject 
 {
     public string songName;
+    public int rhythm = 1;
     public int bpm = 120;
     public Beat[] beats;
 }
