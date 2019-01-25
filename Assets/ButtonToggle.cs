@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class ButtonToggle : MonoBehaviour
 {
     public bool pressed = false;
+    public bool lockButton = false;
 
     [Space]
 
@@ -39,15 +40,23 @@ public class ButtonToggle : MonoBehaviour
 
     public void Press()
     {
-        if(pressed)
+        if (pressed)
         {
-            pressed = false;
-            upEvent.Invoke();
+            if (!lockButton)
+            {
+                pressed = false;
+                upEvent.Invoke();
+            }
         }
         else
         {
             pressed = true;
             downEvent.Invoke();
         }
+    }
+
+    public void ForceUnpress()
+    {
+        pressed = false;
     }
 }

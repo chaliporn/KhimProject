@@ -8,10 +8,26 @@ public class MainLogic : MonoBehaviour
     public GameObject songPrefab;
     public Transform songListTransform;
     public Animator sideMenuAnimator;
+    public GlobalSettings globalSettings;
+
+    public bool isPlaying = false;
+    public bool isPausing = false;
+
+    [Space]
+    public ButtonToggle playButton;
+    public ButtonToggle pauseButton;
 
     void Start()
     {
         PrepareAllSongs();
+    }
+
+    void Update()
+    {
+        if(isPlaying && !isPausing)
+        {
+            globalSettings.currentSongTime += Time.deltaTime;
+        }
     }
 
     private void PrepareAllSongs()
@@ -28,13 +44,34 @@ public class MainLogic : MonoBehaviour
         }
     }
 
-    public void OpenSideMenu()
+    public void OpenSideMenu() => sideMenuAnimator.SetTrigger("SlideIn");
+    public void CloseSideMenu() => sideMenuAnimator.SetTrigger("SlideOut");
+
+    public void Play() 
     {
-        sideMenuAnimator.SetTrigger("SlideIn");
+        isPlaying = true;
     }
-    
-    public void CloseSideMenu()
+
+    public void Pause() 
     {
-        sideMenuAnimator.SetTrigger("SlideOut");
+        isPausing = true;
     }
+
+    public void Unpause() 
+    {
+        isPausing = false;
+    }
+
+    public void Stop()
+    {
+        if(isPlaying)
+        {
+            playButton.ForceUnpress();
+            pauseButton.ForceUnpress();
+            isPlaying = false;
+            isPausing = false;
+            globalSettings.currentSongTime = 0;
+        }
+    }
+
 }

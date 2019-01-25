@@ -18,4 +18,10 @@ public class SongListItem : MonoBehaviour
             rhythmText.text = "| อัตราจังหวะ " + noteChart.rhythm + " ชั้น";
         }
     }
+
+    public void PressCdButton()
+    {
+        GlobalSettings gs = GameObject.FindObjectOfType<GlobalSettings>();
+        gs.selectedMusic = noteChart;
+    }
 }

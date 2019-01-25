@@ -23,6 +23,7 @@ public class InstrumentString : MonoBehaviour
 #endif
     }
 
+
     public void HitString()
     {
 #if UNITY_EDITOR
@@ -35,6 +36,8 @@ public class InstrumentString : MonoBehaviour
         loadedAudio.Play(option);
 #endif
     }
+
+    private float spacingOfLastFrame = 0;
 
     public void Update()
     {
@@ -51,21 +54,27 @@ public class InstrumentString : MonoBehaviour
         if(timeUntil > visibleThreshold)
         {
             horizontalLayoutGroup.spacing = maxSpacing;
+
+            if(maxSpacing > spacingOfLastFrame)
+            {
+                HitString();
+            }
+
+            spacingOfLastFrame = maxSpacing;
         }
         else
         {
             var a = Mathf.InverseLerp(nextNoteTime - visibleThreshold, nextNoteTime,  currentSongTime);
             var b = Mathf.Lerp(maxSpacing, 0, a);
 
-            //var previousSpacing = horizontalLayoutGroup.spacing; //156
             horizontalLayoutGroup.spacing = b; //0
-            // Debug.Log($"{b} {previousSpacing}");
 
-            // if(b == maxSpacing && previousSpacing < b)
-            // {
-            //     Debug.Log("HIT");
-            //     HitString();
-            // }
+            if(b > spacingOfLastFrame)
+            {
+                HitString();
+            }
+            
+            spacingOfLastFrame = b;
         }
     }
 
