@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class MainLogic : MonoBehaviour
 {
@@ -10,6 +11,12 @@ public class MainLogic : MonoBehaviour
     public Transform songListTransform;
     public Animator sideMenuAnimator;
     public GlobalSettings globalSettings;
+
+    [Space]
+
+    public Sprite visibleGuideKim;
+    public Sprite invisibleGuideKim;
+    public Image kimImage;
 
     [Space]
     public float leftEdge = 100;
@@ -36,6 +43,16 @@ public class MainLogic : MonoBehaviour
         {
             globalSettings.currentSongTime += Time.deltaTime;
         }
+    }
+
+    public void VisibleGuide()
+    {
+        kimImage.sprite = visibleGuideKim;
+    }
+
+    public void InvisibleGuide()
+    {
+        kimImage.sprite = invisibleGuideKim;
     }
 
     private void PrepareAllSongs()
