@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using E7.Native;
 using UnityEngine.UI;
+using UnityEngine.Playables;
 
 public class InstrumentString : MonoBehaviour
 {
@@ -12,13 +13,14 @@ public class InstrumentString : MonoBehaviour
     public Image activeMarker;
 
     public HorizontalLayoutGroup horizontalLayoutGroup;
-    public Transform scaler;
+    public PlayableDirector director;
     public int maxSpacing = 156;
 
     NativeAudioPointer loadedAudio;
 
     public void Awake()
     {
+        director.Evaluate();
 #if !UNITY_EDITOR
         loadedAudio = NativeAudio.Load(noteToPlay);
 #endif
@@ -55,7 +57,9 @@ public class InstrumentString : MonoBehaviour
         if(timeUntil > visibleThreshold)
         {
             //horizontalLayoutGroup.spacing = maxSpacing;
-            scaler.localScale = HLGToScale(maxSpacing);
+            //scaler.localScale = HLGToDirector(maxSpacing);
+            director.time = HLGToDirector(maxSpacing);
+            director.Evaluate();
 
             if(maxSpacing > spacingOfLastFrame)
             {
@@ -70,7 +74,9 @@ public class InstrumentString : MonoBehaviour
             var b = Mathf.Lerp(maxSpacing, 0, a);
 
             //horizontalLayoutGroup.spacing = b; //0
-            scaler.localScale = HLGToScale(b);
+            //scaler.localScale = HLGToDirector(b);
+            director.time = HLGToDirector(b);
+            director.Evaluate();
 
             if(b > spacingOfLastFrame)
             {
@@ -81,11 +87,11 @@ public class InstrumentString : MonoBehaviour
         }
     }
 
-    public Vector3 HLGToScale(float hlg)
+    public float HLGToDirector(float hlg)
     {
         float inverseLerp = Mathf.InverseLerp(maxSpacing, 0, hlg); // 0 - 1
-        //Debug.Log($"{hlg} {inverseLerp} - {noteOfString}");
-        return new Vector3(inverseLerp, inverseLerp, inverseLerp);
+        //Debug.Log($"{inverseLerp} , {(float)director.playableAsset.duration}");
+        return Mathf.Lerp(0, (float)director.playableAsset.duration, inverseLerp);
     }
 
     public float TimeUntilNextNote(NoteChart currentSong, float currentSongTime)
