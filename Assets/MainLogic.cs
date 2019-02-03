@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MainLogic : MonoBehaviour
 {
@@ -9,6 +10,13 @@ public class MainLogic : MonoBehaviour
     public Transform songListTransform;
     public Animator sideMenuAnimator;
     public GlobalSettings globalSettings;
+
+    [Space]
+    public float leftEdge = 100;
+    public float rightEdge = -420;
+    public float clampRange = 10;
+    public float currentSlide = 0;
+    public RectTransform kim;
 
     public bool isPlaying = false;
     public bool isPausing = false;
@@ -72,6 +80,21 @@ public class MainLogic : MonoBehaviour
             isPausing = false;
             globalSettings.ResetToPrerollTime();
         }
+    }
+
+    public void Slide(BaseEventData baseEventData)
+    {
+        PointerEventData ped = (PointerEventData) baseEventData;
+        float draggedX = ped.delta.x;
+        currentSlide += draggedX;
+        currentSlide = Mathf.Clamp(currentSlide, rightEdge, leftEdge);
+
+        if(Mathf.Abs(currentSlide) < clampRange)
+        {
+            currentSlide = 0;
+        }
+
+        kim.anchoredPosition = new Vector2(currentSlide, kim.anchoredPosition.y);
     }
 
 }
