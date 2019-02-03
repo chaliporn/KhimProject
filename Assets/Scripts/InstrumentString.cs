@@ -12,6 +12,7 @@ public class InstrumentString : MonoBehaviour
     public Image activeMarker;
 
     public HorizontalLayoutGroup horizontalLayoutGroup;
+    public Transform scaler;
     public int maxSpacing = 156;
 
     NativeAudioPointer loadedAudio;
@@ -53,7 +54,8 @@ public class InstrumentString : MonoBehaviour
         float visibleThreshold = 1;
         if(timeUntil > visibleThreshold)
         {
-            horizontalLayoutGroup.spacing = maxSpacing;
+            //horizontalLayoutGroup.spacing = maxSpacing;
+            scaler.localScale = HLGToScale(maxSpacing);
 
             if(maxSpacing > spacingOfLastFrame)
             {
@@ -67,7 +69,8 @@ public class InstrumentString : MonoBehaviour
             var a = Mathf.InverseLerp(nextNoteTime - visibleThreshold, nextNoteTime,  currentSongTime);
             var b = Mathf.Lerp(maxSpacing, 0, a);
 
-            horizontalLayoutGroup.spacing = b; //0
+            //horizontalLayoutGroup.spacing = b; //0
+            scaler.localScale = HLGToScale(b);
 
             if(b > spacingOfLastFrame)
             {
@@ -76,6 +79,13 @@ public class InstrumentString : MonoBehaviour
             
             spacingOfLastFrame = b;
         }
+    }
+
+    public Vector3 HLGToScale(float hlg)
+    {
+        float inverseLerp = Mathf.InverseLerp(maxSpacing, 0, hlg); // 0 - 1
+        //Debug.Log($"{hlg} {inverseLerp} - {noteOfString}");
+        return new Vector3(inverseLerp, inverseLerp, inverseLerp);
     }
 
     public float TimeUntilNextNote(NoteChart currentSong, float currentSongTime)
@@ -92,6 +102,10 @@ public class InstrumentString : MonoBehaviour
             //Debug.Log($"Current beat is {currentBeat}");
         for (int i = currentBeatInteger; i < currentSong.beats.Length; i++)
         {
+            if(i < 0)
+            {
+                continue;
+            }
             Beat inspectingThisBeat = currentSong.beats[i];
             bool thisIsFirstBeat = i == currentBeatInteger;
             float percentTime = -1;

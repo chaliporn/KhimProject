@@ -6,9 +6,15 @@ using UnityEngine.UI;
 public class GlobalSettings : MonoBehaviour
 {
     public Slider volumeSlider;
-    [Range(0,5)]
+    [Range(-2,5)]
     public float currentSongTime;
+    public float prerollTime = 2;
     public float noteSpeed = 306;
     public NoteChart selectedMusic;
+
+    public void ResetToPrerollTime()
+    {
+        currentSongTime = -prerollTime;
+    }
 
 }

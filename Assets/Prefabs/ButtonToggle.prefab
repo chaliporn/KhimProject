@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pressed: 0
+  lockButton: 0
   image: {fileID: 2594128052488750509}
   upImage: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   downImage: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
@@ -221,7 +222,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: b8daad605bb22452f822ea49590e8695, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

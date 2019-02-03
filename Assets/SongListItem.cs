@@ -23,5 +23,6 @@ public class SongListItem : MonoBehaviour
     {
         GlobalSettings gs = GameObject.FindObjectOfType<GlobalSettings>();
         gs.selectedMusic = noteChart;
+        gs.ResetToPrerollTime();
     }
 }

@@ -70,7 +70,7 @@ public class MainLogic : MonoBehaviour
             pauseButton.ForceUnpress();
             isPlaying = false;
             isPausing = false;
-            globalSettings.currentSongTime = 0;
+            globalSettings.ResetToPrerollTime();
         }
     }
 
