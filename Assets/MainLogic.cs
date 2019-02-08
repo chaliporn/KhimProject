@@ -1,11 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+public enum MainState
+{
+    FreePlay,
+    InTutorial,
+}
+
 public class MainLogic : MonoBehaviour
 {
+    public MainState state = MainState.FreePlay;
+
+    [Space]
     public NoteChart[] allNoteCharts;
     public GameObject songPrefab;
     public Transform songListTransform;
@@ -42,6 +52,18 @@ public class MainLogic : MonoBehaviour
         if(isPlaying && !isPausing)
         {
             globalSettings.currentSongTime += Time.deltaTime;
+        }
+    }
+
+    public void Back()
+    {
+        if(state == MainState.FreePlay)
+        {
+            SceneManager.LoadScene("Title");
+        }
+        else if(state == MainState.InTutorial)
+        {
+            SceneManager.LoadScene("Learn");
         }
     }
 
