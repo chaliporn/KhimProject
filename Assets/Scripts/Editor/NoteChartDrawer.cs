@@ -11,17 +11,20 @@ public class NoteChartDrawer : PropertyDrawer
         SerializedProperty noteKind = property.FindPropertyRelative("noteKind");
         SerializedProperty trill = property.FindPropertyRelative("trill");
         SerializedProperty trillLength = property.FindPropertyRelative("trillLength");
+        SerializedProperty hand = property.FindPropertyRelative("hand");
 
         var r = position;
-        r.width = r.width / 2;
+        r.width = r.width / 4;
         EditorGUI.PropertyField(r, noteKind, new GUIContent(""));
+
+        r.x = r.x + (r.width);
+        EditorGUI.PropertyField(r, hand, new GUIContent(""));
 
         bool isChecked = trill.boolValue;
 
         if (isChecked)
         {
-            r.width = r.width / 2f;
-            r.x = r.x + (r.width * 2);
+            r.x = r.x + (r.width );
             EditorGUI.PropertyField(r, trill, new GUIContent(""));
             r.x = r.x + (r.width );
             EditorGUI.PropertyField(r, trillLength, new GUIContent(""));
@@ -33,6 +36,12 @@ public class NoteChartDrawer : PropertyDrawer
         }
 
     }
+
+
+    // public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+    // {
+    //     return EditorGUIUtility.singleLineHeight * 2;
+    // }
 }
 
 [CustomPropertyDrawer(typeof(NoteEvent))]
@@ -48,6 +57,11 @@ public class NoteEventDrawer : PropertyDrawer
         r.x = r.x + r.width;
         EditorGUI.PropertyField(r, handR, new GUIContent(""));
     }
+
+    // public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+    // {
+    //     return EditorGUIUtility.singleLineHeight * 2;
+    // }
 }
 
 // [CustomPropertyDrawer(typeof(Measure))]

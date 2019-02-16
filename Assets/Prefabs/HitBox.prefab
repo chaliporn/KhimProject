@@ -144,6 +144,12 @@ MonoBehaviour:
   horizontalLayoutGroup: {fileID: 1585907460400547487}
   director: {fileID: 991082102257078920}
   maxSpacing: 156
+  innerMarker: {fileID: 7651067685855536066}
+  markerBorder: {fileID: 2976208193853574494}
+  nonTrillBorderColor: {r: 1, g: 1, b: 1, a: 1}
+  trillBorderColor: {r: 0, g: 0.8301887, b: 0.0018463135, a: 1}
+  singleMarkerColor: {r: 0.15566039, g: 0.5079131, b: 1, a: 1}
+  doubleMarkerColor: {r: 1, g: 0.8855018, b: 0, a: 1}
 --- !u!82 &7903804482097515825
 AudioSource:
   m_ObjectHideFlags: 0

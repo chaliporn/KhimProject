@@ -27,10 +27,17 @@ public struct NoteEvent
     public Note noteR;
 }
 
+public enum Hand
+{
+    Left,
+    Right
+}
+
 [System.Serializable]
 public struct Note
 {
     public NoteKind noteKind;
+    public Hand hand;
     public bool trill;
     public int trillLength;
 }
