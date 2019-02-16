@@ -11,6 +11,15 @@ public class GlobalSettings : MonoBehaviour
     public float prerollTime = 2;
     public float noteSpeed = 306;
     public NoteChart selectedMusic;
+    public bool waitMode;
+    public void StartWaitMode()
+    {
+        waitMode = true;
+    }
+    public void StopWaitMode()
+    {
+        waitMode = false;
+    }
 
     public void ResetToPrerollTime()
     {

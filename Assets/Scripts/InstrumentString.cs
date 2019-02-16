@@ -34,6 +34,7 @@ public class InstrumentString : MonoBehaviour
 #endif
     }
 
+    bool stopBecauseThisString = false;
 
     public void HitString()
     {
@@ -46,6 +47,19 @@ public class InstrumentString : MonoBehaviour
         option.volume = globalSettings.volumeSlider.value;
         loadedAudio.Play(option);
 #endif
+
+        if (stopBecauseThisString)
+        {
+            MainLogic searchMainLogic = GameObject.FindObjectOfType<MainLogic>();
+            searchMainLogic.Unpause();
+            globalSettings.currentSongTime += 0.001f;
+
+            foreach (var instString in GameObject.FindObjectsOfType<InstrumentString>())
+            {
+                instString.stopBecauseThisString = false;
+            }
+        }
+
     }
 
     public void Update()
@@ -55,9 +69,9 @@ public class InstrumentString : MonoBehaviour
             return;
         }
 
-        AppearanceUpdate();
         SoundPlayingUpdate();
-
+        AppearanceUpdate();
+        timePreviousFrame = timeThisFrame;
     }
 
 
@@ -76,39 +90,51 @@ public class InstrumentString : MonoBehaviour
         //     Debug.Log($"CHECKING {timePreviousFrame} < {noteTimeNextToPreviousFrameTime} && {timeThisFrame} > {noteTimeNextToPreviousFrameTime}");
         // }
 
+        // Passed a note
         if (timePreviousFrame < noteTimeNextToPreviousFrameTime && timeThisFrame >= noteTimeNextToPreviousFrameTime)
         {
-            if (isTrill)
+            if (globalSettings.waitMode)
             {
-                // Debug.Log("TRILL string " + noteOfString);
-                float tailLength = tuple.thatNote.trillLength;
-                float tailDuration = (tailLength * 60.0f) / globalSettings.selectedMusic.bpm;
+                MainLogic searchMainLogic = GameObject.FindObjectOfType<MainLogic>();
+                searchMainLogic.Pause();
+                stopBecauseThisString = true;
+                //Debug.Log("Stop on string " + noteOfString);
+            }
+            else
+            {
 
-                if (tuple.oppositeSideNote.trill)
+                if (isTrill)
                 {
-                    if (tuple.thatNote.hand == Hand.Left)
+                    // Debug.Log("TRILL string " + noteOfString);
+                    float tailLength = tuple.thatNote.trillLength;
+                    float tailDuration = (tailLength * 60.0f) / globalSettings.selectedMusic.bpm;
+
+                    if (tuple.oppositeSideNote.trill)
                     {
-                        StartCoroutine(PlayAndStopRoutine(tailDuration, delayed: false));
+                        if (tuple.thatNote.hand == Hand.Left)
+                        {
+                            StartCoroutine(PlayAndStopRoutine(tailDuration, delayed: false));
+                        }
+                        else
+                        {
+                            StartCoroutine(PlayAndStopRoutine(tailDuration, delayed: true));
+                        }
                     }
                     else
                     {
+                        //Debug.Log("Single trill");
+                        StartCoroutine(PlayAndStopRoutine(tailDuration, delayed: false));
                         StartCoroutine(PlayAndStopRoutine(tailDuration, delayed: true));
                     }
                 }
                 else
                 {
-                    //Debug.Log("Single trill");
-                    StartCoroutine(PlayAndStopRoutine(tailDuration, delayed: false));
-                    StartCoroutine(PlayAndStopRoutine(tailDuration, delayed: true));
+                    // Debug.Log("Hitting string " + noteOfString);
+                    HitString();
                 }
             }
-            else
-            {
-                // Debug.Log("Hitting string " + noteOfString);
-                HitString();
-            }
         }
-        timePreviousFrame = timeThisFrame;
+
     }
 
     IEnumerator PlayAndStopRoutine(float tailDuration, bool delayed)
@@ -141,47 +167,56 @@ public class InstrumentString : MonoBehaviour
         var a = Mathf.InverseLerp(nextNoteTime - visibleThreshold, nextNoteTime, currentSongTime);
         var b = Mathf.Lerp(maxSpacing, 0, a);
 
+        if (stopBecauseThisString)
+        {
+            //Debug.Log($"Force Zero Original B : {b}");
+            b = 0;
+        }
+
         //horizontalLayoutGroup.spacing = b; //0
         //scaler.localScale = HLGToDirector(b);
         director.time = HLGToDirector(b);
         director.Evaluate();
 
-        if(tuple.thatNote.trill)
+        if (stopBecauseThisString == false)
         {
-            Color copy = markerBorder.color;
+            if (tuple.thatNote.trill)
+            {
+                Color copy = markerBorder.color;
 
-            Color colorToSet = trillBorderColor;
-            colorToSet.a = copy.a;
+                Color colorToSet = trillBorderColor;
+                colorToSet.a = copy.a;
 
-            markerBorder.color = colorToSet;
-        }
-        else
-        {
-            Color copy = markerBorder.color;
+                markerBorder.color = colorToSet;
+            }
+            else
+            {
+                Color copy = markerBorder.color;
 
-            Color colorToSet = nonTrillBorderColor;
-            colorToSet.a = copy.a;
+                Color colorToSet = nonTrillBorderColor;
+                colorToSet.a = copy.a;
 
-            markerBorder.color = colorToSet;
-        }
+                markerBorder.color = colorToSet;
+            }
 
-        if(tuple.oppositeSideNote.noteKind != NoteKind.None)
-        {
-            Color copy = innerMarker.color;
+            if (tuple.oppositeSideNote.noteKind != NoteKind.None)
+            {
+                Color copy = innerMarker.color;
 
-            Color colorToSet = doubleMarkerColor;
-            colorToSet.a = copy.a;
+                Color colorToSet = doubleMarkerColor;
+                colorToSet.a = copy.a;
 
-            innerMarker.color = colorToSet;
-        }
-        else
-        {
-            Color copy = innerMarker.color;
+                innerMarker.color = colorToSet;
+            }
+            else
+            {
+                Color copy = innerMarker.color;
 
-            Color colorToSet = singleMarkerColor;
-            colorToSet.a = copy.a;
+                Color colorToSet = singleMarkerColor;
+                colorToSet.a = copy.a;
 
-            innerMarker.color = colorToSet;
+                innerMarker.color = colorToSet;
+            }
         }
 
     }
