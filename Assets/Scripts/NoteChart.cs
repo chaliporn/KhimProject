@@ -32,6 +32,7 @@ public struct Note
 {
     public NoteKind noteKind;
     public bool trill;
+    public int trillLength;
 }
 
 public enum NoteKind

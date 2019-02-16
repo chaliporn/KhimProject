@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class TutorialScroller : MonoBehaviour
 {
     public static int rememberPage;
-    public static NoteChart selectedTutorial;
+    public static TutorialPage selectedTutorial;
 
     [Range(0,4)]
     public int page;
@@ -32,13 +32,21 @@ public class TutorialScroller : MonoBehaviour
 
     public void Awake()
     {
+        MainLogic.state = MainState.InTutorial;
         page = rememberPage;
     }
 
-    public void GoToPlay()
+    public void GoToNormalPlay()
     {
+        MainLogic.state = MainState.FreePlayFromLearn;
+        SceneManager.LoadScene("Main");
+    }
+
+    public void GoToTutorialPlay()
+    {
+        MainLogic.state = MainState.InTutorial;
         rememberPage = page;
-        selectedTutorial = allTutorials[page].tutorialChart;
+        selectedTutorial = allTutorials[page];
         SceneManager.LoadScene("Main");
     }
 

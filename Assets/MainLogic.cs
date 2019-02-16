@@ -8,12 +8,13 @@ using UnityEngine.UI;
 public enum MainState
 {
     FreePlay,
+    FreePlayFromLearn,
     InTutorial,
 }
 
 public class MainLogic : MonoBehaviour
 {
-    public MainState state = MainState.FreePlay;
+    public static MainState state = MainState.FreePlay;
 
     [Space]
     public NoteChart[] allNoteCharts;
@@ -42,9 +43,16 @@ public class MainLogic : MonoBehaviour
     public ButtonToggle playButton;
     public ButtonToggle pauseButton;
 
+    public TutorialRunner tutorialRunner;
+
     void Start()
     {
         PrepareAllSongs();
+        if(state == MainState.InTutorial)
+        {
+            tutorialRunner.gameObject.SetActive(true);
+            tutorialRunner.StartTutorial(TutorialScroller.selectedTutorial);
+        }
     }
 
     void Update()
@@ -61,7 +69,7 @@ public class MainLogic : MonoBehaviour
         {
             SceneManager.LoadScene("Title");
         }
-        else if(state == MainState.InTutorial)
+        else if(state == MainState.InTutorial || state == MainState.FreePlayFromLearn)
         {
             SceneManager.LoadScene("Learn");
         }

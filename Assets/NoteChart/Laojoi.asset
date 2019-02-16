@@ -13,201 +13,258 @@ MonoBehaviour:
   m_Name: Laojoi
   m_EditorClassIdentifier: 
   songName: "\u0E25\u0E32\u0E27\u0E08\u0E49\u0E2D\u0E22"
+  rhythm: 1
   bpm: 120
   beats:
   - noteEvent1:
       noteL:
         noteKind: 19
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent2:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent3:
       noteL:
         noteKind: 18
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent4:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
   - noteEvent1:
       noteL:
         noteKind: 17
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent2:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent3:
       noteL:
-        noteKind: 15
+        noteKind: 12
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent4:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
   - noteEvent1:
       noteL:
         noteKind: 5
         trill: 1
+        trillLength: 2
       noteR:
         noteKind: 18
         trill: 1
+        trillLength: 2
     noteEvent2:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent3:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent4:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
   - noteEvent1:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent2:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent3:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent4:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
   - noteEvent1:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent2:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent3:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent4:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
   - noteEvent1:
       noteL:
         noteKind: 4
         trill: 1
+        trillLength: 1
       noteR:
-        noteKind: 17
+        noteKind: 4
         trill: 1
+        trillLength: 1
     noteEvent2:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent3:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent4:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
   - noteEvent1:
       noteL:
         noteKind: 5
         trill: 1
+        trillLength: 1
       noteR:
-        noteKind: 18
-        trill: 0
+        noteKind: 5
+        trill: 1
+        trillLength: 1
     noteEvent2:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent3:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0
     noteEvent4:
       noteL:
         noteKind: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
         trill: 0
+        trillLength: 0

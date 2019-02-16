@@ -10,14 +10,27 @@ public class NoteChartDrawer : PropertyDrawer
     {
         SerializedProperty noteKind = property.FindPropertyRelative("noteKind");
         SerializedProperty trill = property.FindPropertyRelative("trill");
+        SerializedProperty trillLength = property.FindPropertyRelative("trillLength");
 
         var r = position;
         r.width = r.width / 2;
         EditorGUI.PropertyField(r, noteKind, new GUIContent(""));
 
-        r.x = r.x + r.width;
+        bool isChecked = trill.boolValue;
 
-        EditorGUI.PropertyField(r, trill, new GUIContent(""));
+        if (isChecked)
+        {
+            r.width = r.width / 2f;
+            r.x = r.x + (r.width * 2);
+            EditorGUI.PropertyField(r, trill, new GUIContent(""));
+            r.x = r.x + (r.width );
+            EditorGUI.PropertyField(r, trillLength, new GUIContent(""));
+        }
+        else
+        {
+            r.x = r.x + r.width;
+            EditorGUI.PropertyField(r, trill, new GUIContent(""));
+        }
 
     }
 }
