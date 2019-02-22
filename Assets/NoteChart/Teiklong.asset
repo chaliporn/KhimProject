@@ -15,4 +15,7 @@ MonoBehaviour:
   songName: "\u0E40\u0E15\u0E49\u0E22\u0E42\u0E02\u0E25\u0E07"
   rhythm: 1
   bpm: 120
+  sheetMusics:
+  - {fileID: 21300000, guid: cfec95199ad76466b9f95f46873836f0, type: 3}
+  - {fileID: 21300000, guid: 4f9507790050f4f0bb90a48c3cc4bfd5, type: 3}
   beats: []

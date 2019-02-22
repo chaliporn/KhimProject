@@ -12,6 +12,24 @@ public class GlobalSettings : MonoBehaviour
     public float noteSpeed = 306;
     public NoteChart selectedMusic;
     public bool waitMode;
+
+    public bool IsEnded
+    {
+        get
+        {
+            float songLengthSecond = ((float)selectedMusic.beats.Length / selectedMusic.bpm ) * 60;
+            //Debug.Log($"{currentSongTime} {songLengthSecond}");
+            if(currentSongTime  > songLengthSecond)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+
     public void StartWaitMode()
     {
         waitMode = true;

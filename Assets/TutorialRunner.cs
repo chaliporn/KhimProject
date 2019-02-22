@@ -42,7 +42,7 @@ public class TutorialRunner : MonoBehaviour
 
     private void CheckEnding()
     {
-        if(currentPage >= tutorialImages.Length)
+        if(currentPage == tutorialImages.Length)
         {
             globalSettings.selectedMusic = songAfterTutorial;
             mainLogic.Play();

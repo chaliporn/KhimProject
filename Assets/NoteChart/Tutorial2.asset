@@ -10,205 +10,319 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f68cea8f6e1704310b845c4720029f3d, type: 3}
-  m_Name: Tutorial1
+  m_Name: Tutorial2
   m_EditorClassIdentifier: 
-  songName: 
+  songName: "\u0E40\u0E17\u0E04\u0E19\u0E34\u0E01\u0E01\u0E32\u0E23\u0E15\u0E35"
   rhythm: 1
   bpm: 120
+  sheetMusics:
+  - {fileID: 21300000, guid: cfec95199ad76466b9f95f46873836f0, type: 3}
   beats:
   - noteEvent1:
       noteL:
-        noteKind: 7
+        noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
     noteEvent2:
       noteL:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
     noteEvent3:
       noteL:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 20
+        hand: 0
         trill: 0
+        trillLength: 0
     noteEvent4:
       noteL:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
+        hand: 0
         trill: 0
-  - noteEvent1:
-      noteL:
-        noteKind: 5
-        trill: 0
-      noteR:
-        noteKind: 0
-        trill: 0
-    noteEvent2:
-      noteL:
-        noteKind: 0
-        trill: 0
-      noteR:
-        noteKind: 0
-        trill: 0
-    noteEvent3:
-      noteL:
-        noteKind: 0
-        trill: 0
-      noteR:
-        noteKind: 18
-        trill: 0
-    noteEvent4:
-      noteL:
-        noteKind: 0
-        trill: 0
-      noteR:
-        noteKind: 0
-        trill: 0
-  - noteEvent1:
-      noteL:
-        noteKind: 4
-        trill: 0
-      noteR:
-        noteKind: 0
-        trill: 0
-    noteEvent2:
-      noteL:
-        noteKind: 0
-        trill: 0
-      noteR:
-        noteKind: 0
-        trill: 0
-    noteEvent3:
-      noteL:
-        noteKind: 0
-        trill: 0
-      noteR:
-        noteKind: 17
-        trill: 0
-    noteEvent4:
-      noteL:
-        noteKind: 0
-        trill: 0
-      noteR:
-        noteKind: 0
-        trill: 0
-  - noteEvent1:
-      noteL:
-        noteKind: 2
-        trill: 0
-      noteR:
-        noteKind: 0
-        trill: 0
-    noteEvent2:
-      noteL:
-        noteKind: 0
-        trill: 0
-      noteR:
-        noteKind: 0
-        trill: 0
-    noteEvent3:
-      noteL:
-        noteKind: 0
-        trill: 0
-      noteR:
-        noteKind: 15
-        trill: 0
-    noteEvent4:
-      noteL:
-        noteKind: 0
-        trill: 0
-      noteR:
-        noteKind: 0
-        trill: 0
-  - noteEvent1:
-      noteL:
-        noteKind: 1
-        trill: 0
-      noteR:
-        noteKind: 0
-        trill: 0
-    noteEvent2:
-      noteL:
-        noteKind: 0
-        trill: 0
-      noteR:
-        noteKind: 0
-        trill: 0
-    noteEvent3:
-      noteL:
-        noteKind: 0
-        trill: 0
-      noteR:
-        noteKind: 11
-        trill: 0
-    noteEvent4:
-      noteL:
-        noteKind: 0
-        trill: 0
-      noteR:
-        noteKind: 0
-        trill: 0
+        trillLength: 0
   - noteEvent1:
       noteL:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
     noteEvent2:
       noteL:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
     noteEvent3:
       noteL:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
     noteEvent4:
       noteL:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
   - noteEvent1:
       noteL:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
     noteEvent2:
       noteL:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
     noteEvent3:
       noteL:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
     noteEvent4:
       noteL:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
       noteR:
         noteKind: 0
+        hand: 0
         trill: 0
+        trillLength: 0
+  - noteEvent1:
+      noteL:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+      noteR:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+      noteR:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+      noteR:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+      noteR:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+  - noteEvent1:
+      noteL:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+      noteR:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+      noteR:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+      noteR:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+      noteR:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+  - noteEvent1:
+      noteL:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+      noteR:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+      noteR:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+      noteR:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+      noteR:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+  - noteEvent1:
+      noteL:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+      noteR:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+    noteEvent2:
+      noteL:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+      noteR:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+    noteEvent3:
+      noteL:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+      noteR:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+    noteEvent4:
+      noteL:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0
+      noteR:
+        noteKind: 0
+        hand: 0
+        trill: 0
+        trillLength: 0

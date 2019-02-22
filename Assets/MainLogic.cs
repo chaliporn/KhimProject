@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public enum MainState
 {
@@ -43,7 +44,10 @@ public class MainLogic : MonoBehaviour
     public ButtonToggle playButton;
     public ButtonToggle pauseButton;
 
+    public UnityEvent comeFromTutorial;
+
     public TutorialRunner tutorialRunner;
+    public GameObject endDialog;
 
     void Start()
     {
@@ -52,6 +56,7 @@ public class MainLogic : MonoBehaviour
         {
             tutorialRunner.gameObject.SetActive(true);
             tutorialRunner.StartTutorial(TutorialScroller.selectedTutorial);
+            comeFromTutorial.Invoke();
         }
     }
 
@@ -60,6 +65,10 @@ public class MainLogic : MonoBehaviour
         if(isPlaying && !isPausing)
         {
             globalSettings.currentSongTime += Time.deltaTime;
+            if(globalSettings.IsEnded && endDialog.activeSelf == false && state == MainState.InTutorial)
+            {
+                endDialog.SetActive(true);
+            }
         }
     }
 
